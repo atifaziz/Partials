@@ -6,7 +6,7 @@
   "owners": [ "Atif Aziz" ],
   "tags": [ "lambda", "linq" ],
   "licenseUrl": "https://opensource.org/licenses/MIT",
-  "projectUrl": "https://github.com/azizatif/Partials",
+  "projectUrl": "https://github.com/atifaziz/Partials",
   "frameworks": {
     "net35": { },
     "dotnet5.4": {
