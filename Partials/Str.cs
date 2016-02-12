@@ -30,6 +30,11 @@ namespace Partials
     {
         public static readonly Func<string, int> Length = s => s.Length;
 
+        public static Func<string, bool> IsEmpty => s => s.Length == 0;
+        public static Func<string, bool> IsntEmpty => s => s.Length > 0;
+        public static Func<string, bool> IsntNullOrEmpty => s => !string.IsNullOrEmpty(s);
+        public static Func<string, bool> IsntNullOrWhitespace => s => !string.IsNullOrEmpty(s) && !IsNullOrWhiteSpace(s);
+
         public static Func<string, bool> Equals(string value) => value.Equals;
         public static Func<string, bool> Equals(string value, StringComparison comparisonType) => s => value.Equals(s, comparisonType);
 
@@ -104,6 +109,15 @@ namespace Partials
         public static Func<string, string> Remove(int startIndex) => s => s.Remove(startIndex);
 
         public static Func<string, char> CharAt(int index) => s => s[index];
+
+        static bool IsNullOrWhiteSpace(string value)
+        {
+            if (value == null) return true;
+            // ReSharper disable once LoopCanBeConvertedToQuery
+            for (var i = 0; i < value.Length; i++)
+                if (!char.IsWhiteSpace(value, i)) return false;
+            return true;
+        }
     }
 
     #if !NETCORE
