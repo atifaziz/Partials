@@ -24,19 +24,21 @@ using System;
 using System.Reflection;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyTitle("Partials")]
-[assembly: AssemblyDescription("Lambda Sugar Library")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Partials")]
-[assembly: AssemblyCopyright("Copyright \u00a9 2016 Atif Aziz. All rights reserved")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
+[assembly:
+    AssemblyTitle("Partials"),
+    AssemblyDescription("Lambda Sugar Library"),
+    AssemblyCompany(""),
+    AssemblyProduct("Partials"),
+    AssemblyCopyright("Copyright \u00a9 2016 Atif Aziz. All rights reserved"),
+    AssemblyTrademark(""),
+    AssemblyCulture(""),
 
 #if DEBUG
-[assembly: AssemblyConfiguration("DEBUG")]
+    AssemblyConfiguration("DEBUG"),
 #else
-[assembly: AssemblyConfiguration("RELEASE")]
+    AssemblyConfiguration("RELEASE"),
 #endif
 
-[assembly: ComVisible(false)]
-[assembly: CLSCompliant(true)]
+    ComVisible(false),
+    CLSCompliant(true)
+]
