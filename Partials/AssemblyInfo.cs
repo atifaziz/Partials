@@ -33,8 +33,8 @@ using System.Runtime.InteropServices;
     AssemblyTrademark(""),
     AssemblyCulture(""),
 
-    AssemblyVersion("1.0.0.0"),
-    AssemblyFileVersion("1.0.0.0"),
+    AssemblyVersion("1.0.19312.0"),
+    AssemblyFileVersion("1.0.19312.1224"),
 
 #if DEBUG
     AssemblyConfiguration("DEBUG"),
@@ -45,3 +45,5 @@ using System.Runtime.InteropServices;
     ComVisible(false),
     CLSCompliant(true)
 ]
+
+

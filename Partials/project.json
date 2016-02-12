@@ -1,5 +1,5 @@
 ﻿{
-  "version": "1.0.0-beta1",
+  "version": "1.0.0-beta2",
   "title": "Lambda Sugar",
   "description": "Library of partially applied .NET utility and primitive functions that helps reduce the need for writing out simple lambdas.",
   "authors": [ "Atif Aziz" ],
