@@ -78,9 +78,23 @@ var result = string.Join(",", nums.Select(Float64.Parse()
                                                  .Then(Float64.Round(2))));
 ```
 
+You can also negate any predicate function by [statically importing][using]
+(`using static`) the `FuncModule` and using `Not`:
+
+```c#
+var strs = new[] { "foo", "bar", "baz", "quux" };
+
+var r1 = string.Join(", ", strs.Where(Str.Contains("a")));
+Console.WriteLine(r1);  // bar, baz
+
+var r2 = string.Join(", ", strs.Where(Not(Str.Contains("a"))));
+Console.WriteLine(r2);  // foo, quux
+```
+
 
 [build-badge]: https://img.shields.io/appveyor/ci/raboof/partials.svg
 [nuget-badge]: https://img.shields.io/nuget/v/Partials.svg
 [nuget-pkg]: https://www.nuget.org/packages/Partials
 [builds]: https://ci.appveyor.com/project/raboof/partials
 [linq2objs]: https://msdn.microsoft.com/en-us/library/bb397919.aspx
+[using]: https://msdn.microsoft.com/en-us/library/sf0df423.aspx

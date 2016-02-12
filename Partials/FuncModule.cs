@@ -22,10 +22,10 @@
 
 namespace Partials
 {
-    namespace Then { public partial class Func { } }
-    public partial class Str { }
-    public partial class Int { }
-    public partial class Float32 { }
-    public partial class Float64 { }
-    public static partial class FuncModule { }
+    using System;
+
+    static partial class FuncModule
+    {
+        public static Func<T, bool> Not<T>(Func<T, bool> f) => x => !f(x);
+    }
 }
