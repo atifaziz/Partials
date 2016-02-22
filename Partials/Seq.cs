@@ -22,12 +22,16 @@
 
 namespace Partials
 {
-    namespace Then { public partial class Func { } }
-    public partial class Arr { }
-    public partial class Str { }
-    public partial class Seq { }
-    public partial class Int { }
-    public partial class Float32 { }
-    public partial class Float64 { }
-    public static partial class FuncModule { }
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
+    static partial class Seq
+    {
+        public static Func<IEnumerable<T>, string> Join<T>(string separator) => Join<T>(separator, x => x?.ToString());
+        public static Func<IEnumerable<T>, string> Join<T>(string separator, Func<T, string> selector) =>
+            xs => string.Join(separator, xs.Select(selector).ToArray());
+
+        public static Func<IEnumerable<string>, string> JoinStrings(string separator) => Join<string>(separator, s => s);
+    }
 }
