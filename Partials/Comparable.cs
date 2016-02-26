@@ -22,18 +22,25 @@
 
 namespace Partials
 {
-    namespace Then { public partial class Func { } }
-    public partial class Arr { }
-    public partial class Str { }
-    public partial class Seq { }
-    public partial class Int { }
-    public partial class Float32 { }
-    public partial class Float64 { }
-    public partial class FuncModule { }
-    public partial class DateAdd { }
-    public partial class DateTimeKindSpec { }
-    public partial class DateTimeDayOfWeek { }
-    public partial class DateTimeField { }
-    public partial class Rgx { }
-    public partial class Comparable { }
+    using System;
+
+    static partial class Comparable
+    {
+        public static Func<T, bool> Is<T>(T x)               where T : IComparable<T> => Is(x, true ,  0);
+        public static Func<T, bool> IsGreater<T>(T x)        where T : IComparable<T> => Is(x, false,  1);
+        public static Func<T, bool> IsGreaterOrEqual<T>(T x) where T : IComparable<T> => Is(x, true ,  1);
+        public static Func<T, bool> IsLesser<T>(T x)         where T : IComparable<T> => Is(x, false, -1);
+        public static Func<T, bool> IsLesserOrEqual<T>(T x)  where T : IComparable<T> => Is(x, true , -1);
+
+        public static Func<T, bool> Is<T>(T x, bool equal, int comparison)
+            where T : IComparable<T>
+        {
+            comparison = Math.Sign(comparison);
+            return y =>
+            {
+                var result = x.CompareTo(y);
+                return (equal && result == 0) || comparison == Math.Sign(result);
+            };
+        }
+    }
 }
