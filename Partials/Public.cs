@@ -30,4 +30,8 @@ namespace Partials
     public partial class Float32 { }
     public partial class Float64 { }
     public static partial class FuncModule { }
+    public partial class DateAdd { }
+    public partial class DateTimeKindSpec { }
+    public partial class DateTimeDayOfWeek { }
+    public partial class DateTimeField { }
 }
