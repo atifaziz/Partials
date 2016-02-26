@@ -28,6 +28,7 @@ namespace Partials
     {
         static partial class Func
         {
+            public static Func<T, TResult> Id<T, TResult>(this Func<T, TResult> f) => x => f(x);
             public static Func<T1, TResult> Then<T1, T2, TResult>(this Func<T1, T2> f, Func<T2, TResult> g) => x => g(f(x));
             public static Func<T1, TResult> Then<T1, T2, T3, TResult>(this Func<T1, T2> f, Func<T2, T3> g, Func<T3, TResult> h) => f.Then(g).Then(h);
         }
