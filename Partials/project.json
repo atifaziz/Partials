@@ -1,24 +1,27 @@
 ﻿{
-  "version": "1.0.0-beta3",
+  "version": "1.0.0-beta4",
   "title": "Lambda Sugar",
   "description": "Library of partially applied .NET utility and primitive functions that helps reduce the need for writing out simple lambdas.",
   "authors": [ "Atif Aziz" ],
-  "owners": [ "Atif Aziz" ],
-  "tags": [ "lambda", "linq" ],
-  "licenseUrl": "https://opensource.org/licenses/MIT",
-  "projectUrl": "https://github.com/atifaziz/Partials",
+  "packOptions": {
+    "owners": [ "Atif Aziz" ],
+    "tags": [ "lambda", "linq" ],
+    "licenseUrl": "https://opensource.org/licenses/MIT",
+    "projectUrl": "https://github.com/atifaziz/Partials"
+  },
   "frameworks": {
     "net35": { },
-    "dotnet5.4": {
-      "compilationOptions": {
+    "netstandard1.0": {
+      "buildOptions": {
         "define": [ "NETCORE" ]
       },
       "dependencies": {
-        "Microsoft.CSharp": "4.0.1-*",
-        "System.Collections": "4.0.11-*",
-        "System.Linq": "4.0.1-*",
-        "System.Runtime": "4.0.21-*",
-        "System.Globalization": "4.0.11-*"
+        "Microsoft.CSharp": "4.0.1",
+        "System.Collections": "4.0.11",
+        "System.Linq": "4.1.0",
+        "System.Runtime": "4.1.0",
+        "System.Globalization": "4.0.11",
+        "System.Runtime.Extensions": "4.1.0"
       }
     }
   }
