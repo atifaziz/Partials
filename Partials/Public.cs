@@ -34,4 +34,5 @@ namespace Partials
     public partial class DateTimeKindSpec { }
     public partial class DateTimeDayOfWeek { }
     public partial class DateTimeField { }
+    public partial class Rgx { }
 }
