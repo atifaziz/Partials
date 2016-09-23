@@ -33,8 +33,8 @@ using System.Runtime.InteropServices;
     AssemblyTrademark(""),
     AssemblyCulture(""),
 
-    AssemblyVersion("1.0.19326.0"),
-    AssemblyFileVersion("1.0.19326.1036"),
+    AssemblyVersion("1.0.20023.0"),
+    AssemblyFileVersion("1.0.20023.1140"),
 
 #if DEBUG
     AssemblyConfiguration("DEBUG"),

@@ -30,6 +30,8 @@ namespace Partials
     {
         public static readonly Func<string, int> Length = s => s.Length;
 
+        public static Func<string, bool> IsNull => s => s == null;
+        public static Func<string, bool> IsntNull => s => s != null;
         public static Func<string, bool> IsEmpty => s => s.Length == 0;
         public static Func<string, bool> IsntEmpty => s => s.Length > 0;
         public static Func<string, bool> IsntNullOrEmpty => s => !string.IsNullOrEmpty(s);
