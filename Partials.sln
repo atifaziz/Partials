@@ -5,8 +5,10 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8E1D1E31-0D71-46C0-86F2-72D42C1FAF54}"
 	ProjectSection(SolutionItems) = preProject
+		build.cmd = build.cmd
 		..\Mannex\COPYING.txt = ..\Mannex\COPYING.txt
 		global.json = global.json
+		pack.cmd = pack.cmd
 		README.md = README.md
 	EndProjectSection
 EndProject
