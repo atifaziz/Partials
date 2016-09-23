@@ -58,8 +58,8 @@ var result = string.Join(", ", nums.Select(Float64.Parse())
 ```
 
 Partials also gives you `Then` for composing functions together, which can
-also be used above to turn the chained projections (the two `Select`
-operations) in the example above into one:
+also be used to turn the chained projections, like the two `Select` operations)
+in the example above, into one:
 
 ```c#
 var result = string.Join(", ", nums.Select(Float64.Parse()
