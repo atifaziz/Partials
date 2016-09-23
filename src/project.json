@@ -1,4 +1,5 @@
 ﻿{
+  "name": "Partials",
   "version": "1.0.0",
   "title": "Lambda Sugar",
   "description": "Library of partially applied .NET utility and primitive functions that helps reduce the need for writing out simple lambdas.",
@@ -10,7 +11,7 @@
     "projectUrl": "https://github.com/atifaziz/Partials"
   },
   "frameworks": {
-    "net35": { },
+    "net35": {},
     "netstandard1.0": {
       "buildOptions": {
         "define": [ "NETCORE" ]
