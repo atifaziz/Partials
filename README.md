@@ -3,14 +3,14 @@
 [![Build Status][build-badge]][builds]
 [![NuGet][nuget-badge]][nuget-pkg]
 
-Partials is a library partially applied .NET utility and primitive functions
-that helps reduce the need for writing out simple lambdas. It is especially
+Partials is a library of partially applied .NET utility and primitive functions
+that help reduce the need for writing out simple lambdas. It is especially
 useful when authoring [LINQ to Objects][linq2objs] queries.
 
 ## Motivation
 
 Suppose the following example that rounds up 5 double-precision numbers up to
-second their fractional digit:
+their second fractional digit:
 
 ```c#
 var nums = new[]
@@ -58,7 +58,7 @@ var result = string.Join(", ", nums.Select(Float64.Parse())
 ```
 
 Partials also gives you `Then` for composing functions together, which can
-also be used to turn the chained projections, like the two `Select` operations)
+be used to turn the chained projections, like the two `Select` operations
 in the example above, into one:
 
 ```c#
@@ -67,8 +67,8 @@ var result = string.Join(", ", nums.Select(Float64.Parse()
 ```
 
 The next example shows more composition in action, where each string is parsed
-into a number, multiplied by 5, square-rooted and capped to 1.5 before being
-rounded up:
+into a number, multiplied by 5, square-rooted and then capped to 1.5 before
+being rounded up:
 
 ```c#
 var result = string.Join(",", nums.Select(Float64.Parse()
